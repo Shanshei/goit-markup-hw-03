@@ -22,27 +22,68 @@
     font-family: 'Roboto', sans-serif;
     color: #212121;
 }
+
+/* &------- Reset---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin-top: 0;
+}
+p:last-child{
+    margin: 0;
+}
+
+
 .link{
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
+
 .list{
     list-style: none;
+    color: currentColor;
+}
+/* &------- Container-------- */
+.container{
+    outline: 2px solid tomato;
+    outline-offset: -2px;
+
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 
 
-/* -----------Header--------- */
+/* ^-----------Header--------- */
+
 
 .header{
     background-color: var(--background-color)
 }
+
+.header-container{
+    display: flex;
+    align-items: center;
+}
+
 .logo-link{
     color: #2196F3;
-    font-family: 'Raleway', sans-serif;;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+
+    margin-left: 93px;
 }
 
 
@@ -55,20 +96,39 @@
     
 }
 
-/* ----site nav------ */
+/* *----site nav------ */
+.site-nav {
+    display: flex;
+}
+
+.header-item{
+    margin-right: 50px;
+}
+.header-item:last-child{
+    margin: 0;
+}
+
 .link-nav.current{
     color: var(--accent-color);
 }
 
+
+
 .link-nav {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+
     
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primacy-text-color);
-
 }
+
+
 .link-nav:focus,
 .link-nav:hover{
     color: var(--accent-color)
@@ -77,11 +137,19 @@
 
     
 
+.list-contact{
+    display: flex;
+    margin-left:auto ;
+}
 
 
-.mail,
+.header-contact:not(:last-child){
+    margin-right: 50px;
+}
 .contact {
-    
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     
     font-weight: 500;
     font-size: 14px;
@@ -90,10 +158,7 @@
     
     color: var(--item-text-color);
 }
-.mail:focus,
-.mail:hover{
-    color: var(--accent-color)
-}
+
 
 .contact:focus,
 .contact:hover{
@@ -101,13 +166,19 @@
 }
 
 
-/* ------hero------- */
+/* ^------hero------- */
 .hero{
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color:var(--third-background-color);
 }
 
 .hero-title{
-    
+    width: 696px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -118,18 +189,29 @@
     
 }
 .hero-btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    
     letter-spacing: 0.06em;
+
     color: var(--background-color);
     background-color: var(--accent-color);
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
     
 }
-
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: #188CE8;
+}
 
 
 /* All section */
