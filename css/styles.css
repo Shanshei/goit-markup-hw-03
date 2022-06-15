@@ -13,8 +13,12 @@
     --background-color:#ffffff;
     --secondary-background-color:#f5f4fa;
     --hero-title-color:#ffffff;
-}
 
+    /* &----Card-set------ */
+    --item: 3;
+    --indent: 30px;
+}
+ 
 
 
 
@@ -36,6 +40,9 @@ p{
 p:last-child{
     margin: 0;
 }
+img{
+    display: block;
+}
 
 
 .link{
@@ -51,7 +58,7 @@ p:last-child{
 /* &------- Container-------- */
 .container{
     outline: 2px solid tomato;
-    outline-offset: -2px;
+    
 
     width: 1200px;
     padding-left: 15px;
@@ -60,22 +67,39 @@ p:last-child{
     margin-right: auto;
 
 }
+/* & сетка flex */
+.card-set{
+    display: flex;
+    flex-wrap: wrap;
 
+    margin: calc(-1 * var(--indent) / 2);
+    padding: 0;
+    
+    
+}
+.card-set-item{
+    flex-basis: calc((100% - var(--indent) * var(--item)) / var(--item));
+    
+    margin: calc(var(--indent) / 2);
+}
 
 
 /* ^-----------Header--------- */
 
 
 .header{
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ECECEC;
 }
 
 .header-container{
     display: flex;
     align-items: center;
+    
 }
 
 .logo-link{
+    display: block;
     color: #2196F3;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -83,7 +107,8 @@ p:last-child{
     line-height: 1.19;
     letter-spacing: 0.03em;
 
-    margin-left: 93px;
+    margin-right: 93px;
+    
 }
 
 
@@ -214,7 +239,12 @@ p:last-child{
 }
 
 
-/* All section */
+/* *All section */
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+}
 .section-title{
     font-weight: 700;
     font-size: 36px;
@@ -223,7 +253,31 @@ p:last-child{
     letter-spacing: 0.03em;
     color: var(--title-text-color)
 }
-/* ----------features--------- */
+/* ^----------features--------- */
+.section-features{
+    padding-bottom: 47px;
+}
+
+
+.visually-hidden { 
+position: absolute; 
+width: 1px; 
+height: 1px; 
+margin: -1px; 
+border: 0; 
+padding: 0; 
+white-space: nowrap; 
+clip-path: inset(100%); 
+clip: rect(0 0 0 0); 
+overflow: hidden; 
+} 
+.features-list{
+    /* ^Количество элементов в ряд */
+    --item: 4;
+}
+
+
+
 
 .features-list .title{
     font-weight: 700;
@@ -239,16 +293,21 @@ p:last-child{
     letter-spacing: 0.03em;
     color: var(--item-text-color);
 }
-/*----------- Work--------- */
+/*^----------- Work--------- */
+.section-work{
+    padding-top: 47px;
+}
 
 
 
-
-/* -----------team--------- */
+/* ^-----------team--------- */
 .section-team{
     background-color: var(--secondary-background-color);
 }
 
+.team-list{
+    --item: 4;
+}
 .team-list .title{
     font-weight: 500;
     font-size: 16px;
@@ -264,14 +323,26 @@ p:last-child{
     letter-spacing: 0.03em;
     color: var(--item-text-color);
 }
-/*------------ footer----------- */
+/*^------------ footer----------- */
 .footer-content{
-    background-color:var(--third-background-color)
-
+    background-color:var(--third-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
 .footer-address{
     font-style: normal;
+    margin-top: 20px;
 }
+.list-address{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.footer-item:not(:last-child){
+    margin-bottom: 9px;
+
+} 
 
 .footer-address-link {
     
@@ -293,29 +364,49 @@ p:last-child{
 }
 
 
-/* --------Portfolio-------- */
-.section-portfolio{
+/* ^--------Portfolio-------- */
+.portfolio{
     background-color: var(--background-color)
 }
 
+.list-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.filter-item :not(:last-child){
+    margin-right: 8px;
+}
 
-.button-current{
+
+.button{
+    padding: 6px 22px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
 
 }
-.button-current:hover,
-.button-current:focus{
+.button:hover,
+.button:focus{
     color: var(--hero-title-color);
     background-color: var(--accent-color);
 }
 
+.button.current{
+    color: var(--hero-title-color);
+    background-color: var(--accent-color);
+}
 
-
+.portfolio-wrapper{
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
 
 
 .portfolio-title {
