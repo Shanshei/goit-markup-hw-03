@@ -57,7 +57,7 @@ img{
 }
 /* &------- Container-------- */
 .container{
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
     
 
     width: 1200px;
@@ -307,6 +307,12 @@ overflow: hidden;
 
 .team-list{
     --item: 4;
+}
+
+.team-wrapper{
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-list .title{
     font-weight: 500;
