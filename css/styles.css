@@ -176,9 +176,10 @@ img{
     margin-right: 50px;
 }
 .contact {
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
+    
     
     font-weight: 500;
     font-size: 14px;
@@ -194,12 +195,25 @@ img{
     color: var(--accent-color)
 }
 
+.contact-icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+.contact .contact-icon:hover,
+.contact .contact-icon:focus{
+    fill: var(--accent-color);
+}
 
 /* ^------hero------- */
 .hero{
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center ;
+    
+    
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color:var(--third-background-color);
+    
 }
 
 .hero-title{
@@ -282,9 +296,20 @@ overflow: hidden;
 }
 
 
+.features-wrapper-icon{
+    
+    width: 270px;
+    height: 120px;
+}
+.features-icon{
+    
+    margin: 25px 100px;
+}
+
 
 
 .features-list .title{
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -339,12 +364,89 @@ overflow: hidden;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--item-text-color);
+    margin-bottom: 16px;
+
 }
+.masters-list{
+    display: flex;
+    justify-content: center;
+
+}
+
+.masters-item{
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+
+}
+.masters-item:first-child{
+    margin-left: 0;
+}
+.masters-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.masters-icon{
+    fill: #AFB1B8;
+}
+.masters-link:hover,
+.masters-link:focus{
+    background-color: var(--accent-color);
+}
+.masters-link:hover .masters-icon,
+.masters-link:focus .masters-icon{
+    fill: var(--background-color);
+}
+
+/*^---------------Clients----------- */
+
+
+
+.clients-list{
+    display: flex;
+    justify-content: center;
+}
+.clients-item{
+    margin-right: 30px;
+    margin-top: 50px;
+    
+}
+.clients-item:last-child{
+    margin-right: 0;
+
+}
+.clients-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+    
+}
+
+
+.clients-icon{
+    margin: 16px 32px;
+    fill:#AFB1B8
+}
+
+
+
 /*^------------ footer----------- */
 .footer-content{
     background-color:var(--third-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-top: 94px;
 }
 
 
