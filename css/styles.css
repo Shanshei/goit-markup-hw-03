@@ -73,7 +73,7 @@ img{
     display: flex;
     flex-wrap: wrap;
 
-    margin: calc(-1 * var(--indent) / 2);
+    margin: calc(-1 * var(--indent) / 1);
     
     
     
@@ -300,6 +300,8 @@ overflow: hidden;
     
     width: 270px;
     height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
 }
 .features-icon{
     
@@ -370,6 +372,7 @@ overflow: hidden;
 .masters-list{
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -435,18 +438,37 @@ overflow: hidden;
 
 
 .clients-icon{
+    width: 106px;
+    height: 60px;
     margin: 16px 32px;
-    fill:#AFB1B8
+    
+    fill:#AFB1B8;
+    
+}
+.clients-link:hover,
+.clients-link:focus {
+    border-color: var(--accent-color);
 }
 
-
+.clients-link .clients-icon:hover,
+.clients-link .clients-icon:focus{
+    fill: var(--accent-color);
+}
 
 /*^------------ footer----------- */
+
+
+
+.content{
+    display: flex;
+    align-items: baseline;
+}
 .footer-content{
+    
     background-color:var(--third-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    margin-top: 94px;
+    /* margin-top: 94px; */
 }
 
 
@@ -480,6 +502,66 @@ overflow: hidden;
     color: var(--accent-color);
 }
 
+.footer-join{
+    margin-left: 156px;
+    
+    
+}
+
+.footer-join-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    
+    
+    
+    
+}
+
+.footer-join-list{
+    display: flex;
+
+}
+
+.footer-join-item{
+    width: 44px;
+    height: 44px;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+}
+.footer-join-item:first-child{
+    margin-left: 0;
+}
+.footer-join-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+
+.footer-join-icon{
+    
+    fill: #FFFFFF;
+}
+.footer-join-link:hover,
+.footer-join-link:focus{
+    background-color: var(--accent-color);
+}
+.footer-join-link:hover .footer-join-icon,
+.footer-join-link:focus .footer-join-icon{
+    fill: var(--background-color);
+}
 
 /* ^--------Portfolio-------- */
 .portfolio{
@@ -519,6 +601,15 @@ overflow: hidden;
 .button.current{
     color: var(--hero-title-color);
     background-color: var(--accent-color);
+}
+
+
+.gallery{
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
+    
 }
 
 .portfolio-wrapper{
