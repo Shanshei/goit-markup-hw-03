@@ -74,12 +74,11 @@ img{
 
 /* &------- Container-------- */
 .container{
-    /* outline: 2px solid tomato; */
+    outline: 2px solid tomato;
     
 
     width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -88,18 +87,14 @@ img{
 .card-set{
     display: flex;
     flex-wrap: wrap;
-
-    margin: calc(-1 * var(--indent) / 1);
     gap: 24px;
+    padding-left: 0;
     
     
     
 
 }
-.card-set-item{
-    flex-basis: calc((100% - 2 * 24px) / 3);
-    
-}
+
 
 
 /* ^-----------Header--------- */
@@ -153,8 +148,7 @@ img{
 
 .header-item{
     margin-right: 40px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    
 }
 .header-item:last-child{
     margin: 0;
@@ -173,6 +167,7 @@ img{
     line-height: 1.50;
     letter-spacing: 0.02em;
     color: var(--primacy-text-color);
+    padding: 24px 0;
 }
 
 
@@ -334,15 +329,18 @@ overflow: hidden;
 } 
 .features-list{
     /* ^Количество элементов в ряд */
-    /* --item: 4; */
+    
     display: flex;
     gap: 24px;
     }
 
 .card-set-item-features{
     display: flex;
-    flex-basis: calc((100% - 72px) / 4);
-    flex-wrap: wrap;
+    width: calc((100% - 72px) / 4);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
 }
 
 .features-wrapper-icon{
@@ -376,11 +374,12 @@ overflow: hidden;
 }
 
 .features-list .text{
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 1.50;
+    letter-spacing: 0.02em;
     color: var(--item-text-color);
 }
+
 
 /*^----------- Work--------- */
 .section-work{
@@ -390,9 +389,16 @@ overflow: hidden;
     margin-bottom: 72px;
 
 }
+.work-list{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-left: 0;
+
+}
 .card-set-item-work{
-    display:flex;
-    flex-basis: calc((100% - 48px) / 3);
+    width: calc((100% - 48px) / 3);
+    
 }
 
 
@@ -402,10 +408,15 @@ overflow: hidden;
     background-color: var(--secondary-background-color);
 }
 
-.card-set-item-team{
+.team-list{
     display: flex;
+    padding-left: 0;
+    gap: 24px;
+}
+.card-set-item-team{
+    
     width: calc((100% - 3 * 24px) / 4);
-    flex-wrap: wrap;
+
     border-radius: 0px 0px 4px 4px;
     
 
@@ -534,11 +545,14 @@ overflow: hidden;
 
 
 .list-projects{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 24px;
     margin-bottom: 72px;
     row-gap: 48px
 }
 .card-set-item-port{
-    display: flex;
     width: calc((100% - 48px) / 3);
 }
 .portfolio-wrapper{
