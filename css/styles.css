@@ -365,11 +365,10 @@ overflow: hidden;
 .title{
     margin-top: 30px;
     margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.50;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
     color: var(--title-text-color);
     
 }
