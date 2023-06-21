@@ -74,11 +74,12 @@ img{
 
 /* &------- Container-------- */
 .container{
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
     
 
     width: 1158px;
-    padding: 0 15px 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 
@@ -90,9 +91,6 @@ img{
 
     margin: calc(-1 * var(--indent) / 1);
     gap: 24px;
-
-
-    margin: calc(-1 * var(--indent) / 1);
     
     
     
@@ -155,7 +153,8 @@ img{
 
 .header-item{
     margin-right: 40px;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .header-item:last-child{
     margin: 0;
@@ -316,7 +315,8 @@ img{
 }
 /* ^----------features--------- */
 .section-features{
-    padding-bottom: 60px;
+    padding-bottom: 120px;
+    padding-top: 120px;
 }
 
 
@@ -336,11 +336,14 @@ overflow: hidden;
     /* ^Количество элементов в ряд */
     /* --item: 4; */
     display: flex;
-    flex-basis: calc((100% - 72px) / 4);
     gap: 24px;
-    flex-wrap: nowrap;
-}
+    }
 
+.card-set-item-features{
+    display: flex;
+    flex-basis: calc((100% - 72px) / 4);
+    flex-wrap: wrap;
+}
 
 .features-wrapper-icon{
     
@@ -360,17 +363,18 @@ overflow: hidden;
 
 
 
-.features-list .title{
+.title{
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--title-text-color)
-    margin-bottom: 8px;
+    color: var(--title-text-color);
+    
 }
+
 .features-list .text{
     font-size: 14px;
     line-height: 1.71;
@@ -386,9 +390,9 @@ overflow: hidden;
     margin-bottom: 72px;
 
 }
-.work-list{
+.card-set-item-work{
     display:flex;
-    flex-basis: calc((100% - 2 * 24px) / 3);
+    flex-basis: calc((100% - 48px) / 3);
 }
 
 
@@ -400,24 +404,36 @@ overflow: hidden;
 
 .card-set-item-team{
     display: flex;
-    flex-basis: calc((100% - 72px) / 4);
-    flex-wrap: nowrap;
+    width: calc((100% - 3 * 24px) / 4);
+    flex-wrap: wrap;
+    border-radius: 0px 0px 4px 4px;
+    
+
 }
 .title{
     margin-bottom: 72px;
+    text-align: center;
 }
-.team-item{
+/* .team-item{
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
+} */
 
 .team-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 32px 16px;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
     
+    border-radius: 0px 0px 4px 4px;
+}
+.text{
+    text-align: center
 }
 
 
@@ -456,8 +472,8 @@ overflow: hidden;
 
 
 /* ^--------Portfolio-------- */
-.portfolio{
-    background-color: var(--background-color)
+.section-portfolio{
+    background-color: var(--background-color);
     padding-top: 96px;
     padding-bottom: 120px;
 }
@@ -465,7 +481,7 @@ overflow: hidden;
 .list-button{
     display: flex;
     justify-content: center;
-    margin-bottom: 66px;
+    margin-bottom: 72px;
     
     
 }
@@ -522,14 +538,14 @@ overflow: hidden;
     row-gap: 48px
 }
 .card-set-item-port{
+    display: flex;
     width: calc((100% - 48px) / 3);
 }
 .portfolio-wrapper{
     padding: 32px 16px;
-    
-    
-    border-top: none;
+
     border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 
